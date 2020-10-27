@@ -27,9 +27,10 @@
     }
     
     .container{
-        margin-left: 20%;
-        margin-right: 20%;
+        
         background-color: rgb(189, 189, 189);
+        margin-left: 10%;
+        margin-right: 22%;
     }
     .title{
         font-size: 250%;
@@ -42,10 +43,18 @@
     }
     .title2 a{
         color: white;
-        background-color: blue;
+        background-color: rgb(0,85,184);
+    }
+    .right button{
+        color: white;
+        background-color: #333;
+    }
+    .right button:hover{
+        color: #333;
+        background-color: white;
     }
     .title2 a:hover{
-        color: blue;
+        color: rgb(0,85,184);;
         background-color: white;
     }
     iframe{
@@ -60,6 +69,26 @@
     }
     #copyright{
         width: 10%;
+    }
+    .body{
+        display: flex;
+    }
+    .right{
+        position: fixed;
+        top:50%;
+        transform: translate(0,-50%);
+        right: 0;
+        margin: none;
+        width: 20%;
+        background-color: rgb(0,85,184);
+        border-radius: 2em;
+        margin-right: 1%;
+        
+    }
+    .right img{
+        width: 80%;
+        border-top-left-radius: 2em;
+        border-top-right-radius: 2em;
     }
 @media only screen and (max-width : 1000px){
     .container{
@@ -82,10 +111,14 @@
     #copyright{
         width: 20%;
     }
+    .right{
+        display: none;
+    }
 }
 </style>
 
 <body >
+    <div class = "body">
     <div class = "container">
         <center>
             <br>
@@ -185,6 +218,17 @@
                 </center>
             </div>
         </div>
+    </div><div class = "right">
+        <center>
+            <img src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.zawya.com%2Fpr%2Fimages%2F2019%2FJPHE_2019_06_30.png&f=1&nofb=1">
+            <br>
+            <button class = "title2" type="button" onclick="opexn()">Open Official Website</button>
+        </center>
     </div>
-    
+</div>
 </body>
+<script>
+    function opexn(){
+        window.open("https://www.ku.ac.ae/");
+    }
+</script>
