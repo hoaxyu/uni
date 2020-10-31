@@ -236,13 +236,32 @@
         <div class = "p">
             <div class = "title">
                 <center>
-                    Game (Made By Me PC)
+                    Games (Made By Me [WINDOWS ONLY])
                 </center>
             </div>
             <br><br>
             <center>
-                <button class="title3" type="button" onclick=""><a href="Game.zip" download>Download</a></button>
+            <button type="button" onclick="activate()"><img src = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_544491.png&f=1&nofb=1" width="30%"></button>
+        </center>
+            <div class = "modale" id="modale1">
+                <div class = "containerx">
+                    <button type= "button" class = "close" onclick="closexx()">&times;</button>
+                    <br><br><br><br>
+                    <center>
+                    
+                </center>
+                <br><br>
+                
+            <center>
+                <button class="title3" type="button" onclick=""><a href="Game.zip" download>Crocodile Box Dasher (Easy)</a></button>
             </center>
+            <br>
+            <center>
+                <button class="title3" type="button" onclick=""><a href="NaniSlider.zip" download>Nani Slider (Hard)</a></button>
+            </center>
+            <br>
+        </div>
+    </div>
             <br>
         </div>
         <br>
@@ -275,3 +294,73 @@
         window.open("https://www.ku.ac.ae/");
     }
 </script>
+
+
+
+
+
+
+
+
+
+<script>
+    var modale1 = document.getElementById('modale1');
+    function activate(){
+        
+        if(modale1.style.display = "none"){
+            modale1.style.display = "flex";
+        }
+    }
+    function closexx(){
+        modale1.style.display = "none";
+        
+    }
+</script>
+<style>
+    #modale1{
+        display: none;
+    }
+    .modale{
+        position: fixed;
+        top:50%;
+        right: 50%;
+        transform: translate(50%,-50%);
+        opacity: 1;
+        background-color: rgba(0,0,0,0.8);
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        outline: none;
+    }
+    .containerx{
+        background-color:  rgb(189, 189, 189);
+        position: absolute;
+        top:50%;
+        right: 50%;
+        transform: translate(50%,-50%);
+        border-radius: 2em;
+        
+        
+        width: 50%;
+        z-index: 2;
+
+    }
+    .close{
+        float: right;
+        font-size: 300%;
+        margin: 0.5em;
+        font-weight: bold;
+        border-radius: 100%;
+        
+    }
+    
+    .close:hover {
+        color: red;
+        cursor: pointer;
+    }
+    @media only screen and (max-width: 1000px){
+        .containerx{
+            width: 100%;
+        }
+    }
+</style>
